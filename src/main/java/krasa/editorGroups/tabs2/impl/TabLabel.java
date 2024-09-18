@@ -247,6 +247,16 @@ public class TabLabel extends JPanel implements Accessible, Disposable {
 	}
 
 	@Override
+	public Dimension getPreferredSize()
+	{
+		final Dimension size = super.getPreferredSize();
+
+		size.height = JBUI.CurrentTheme.TabbedPane.TAB_HEIGHT.get();
+
+		return size;
+	}
+
+	@Override
 	public void paint(final Graphics g) {
 		if (myTabs.isDropTarget(myInfo)) return;
 		doPaint(g);

@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "EditorGroups"
-version = "0.48"
+version = "0.48.1"
 
 tasks {
     patchPluginXml {
@@ -13,7 +13,7 @@ tasks {
         untilBuild.set("242.*")
         changeNotes.set(
             buildString {
-                append("- Add support to 2024.2;").append("<br>").append("- Fix deprecations warnings;")
+                append("- Fix tabs height")
             }
         )
     }
